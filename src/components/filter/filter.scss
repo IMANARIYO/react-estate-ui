@@ -1,0 +1,72 @@
+.filter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+
+    h1 {
+        font-size: 24px;
+        font-weight: 300;
+    }
+       
+       
+            .item {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                label{
+                    font-size: 10px;
+                }
+                input,
+                select {
+                   width: 100px;
+                    padding: 10px;
+                    border: 1px solid #e0e0e0;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    box-sizing: border-box;
+                }
+               
+                  
+        }
+        .top{
+            input{
+                width:100%;
+            };
+        }
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+
+            .item {
+             
+                
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                label {
+                    font-size: 10px;
+                }
+
+               
+            }
+
+            .button {
+               
+                width: 100px;
+                padding: 10px;
+                border: none;
+                cursor: pointer;
+                background-color: #fece51;
+                font-size: 14px;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+  
+}

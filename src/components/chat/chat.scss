@@ -1,0 +1,139 @@
+.chat {
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+
+  .messages {
+    flex: 1; // This makes .messages take the available space
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; // Changed to auto to show scrollbar only when necessary
+    gap: 20px;
+    padding: 20px;
+
+    h1 {
+      font-weight: 300;
+    }
+
+    .message {
+      display: flex;
+      background-color: #fff;
+      gap: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      align-items: center;
+      cursor: pointer;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .chatBox {
+    flex: 1; // Ensures chatBox takes the remaining space
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+overflow-y: auto;
+    .top {
+      background-color: #f7c14b85;
+      padding: 20px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        img {
+          width: 30px;
+          height: 30px;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+
+      .close {
+        cursor: pointer;
+      }
+    }
+
+    .center {
+    height: 350px;
+    overflow: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+
+      .chatMessage {
+     width: 60%;
+
+        p {
+          background-color: #f1f1f1;
+          padding: 10px;
+          border-radius: 10px;
+        }
+
+        span {
+          font-size:small;
+      background-color: #f7c14b85;
+      
+     padding: 2px;
+     border-radius: 5px;
+        }
+        &.own {
+       
+          align-self: flex-end;
+          text-align: right;
+        }
+      
+      }
+    }
+
+    .bottom {
+      padding: 20px;
+      display: flex;
+      
+      gap: 10px;
+      border-top: 2px solid #f7c14b85;
+      align-items: center;
+      justify-content: space-between;
+height: 160px;
+      textarea {
+        flex: 3;
+        resize: none;
+        height: 100%; 
+       
+      }
+
+      button {
+        flex: 1;
+  
+        background-color: #f7c14b85 ;
+height: 100%;
+        border: none;
+  
+        cursor: pointer;
+
+        &:hover {
+          background-color: #f5e7c885;
+        }
+      }
+    }
+  }
+}

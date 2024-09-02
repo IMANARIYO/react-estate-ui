@@ -1,0 +1,25 @@
+// _variables.scss
+$popup-img-width: 92px;
+$popup-img-height: 64px;
+$border-radius: 5px;
+$gap: 20px;
+
+
+
+.popupContainer {
+  display: flex;
+  gap: $gap;
+
+  img.popupImage {
+    width: $popup-img-width; // Use the variable for image width
+    height: $popup-img-height; // Use the variable for image height
+    object-fit: cover;
+    border-radius: $border-radius; // Use the variable for border-radius
+  }
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

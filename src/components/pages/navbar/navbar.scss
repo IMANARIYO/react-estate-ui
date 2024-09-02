@@ -1,0 +1,160 @@
+@import"../../responsive.scss";
+nav{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    height: 100px;
+    // background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    z-index: 9999;
+    a{
+        text-decoration: none;
+        transition: all 0.4s ease;
+        &:hover{
+            scale: 1.05;
+        }
+        @include sm{
+            display: none;
+        }
+    }
+
+
+
+    .right{
+        flex: 2;
+       display:flex;
+       align-items: center;
+       justify-content: flex-end;
+       background-color: #fcf5f3;
+       height: 100%;
+       @include md{
+        background-color: transparent;
+       }
+       a{
+        padding: 12px 24px;
+        margin: 20px;
+
+       }
+       .register{
+        background-color: #fece51;
+       }
+
+        .menuIcon{
+         display: none;
+         height: 100%;
+   
+         z-index: 99;
+         img{
+            height: 50%;
+            align-self: center;
+            justify-self: center;
+            cursor: pointer;
+
+         }
+         @include sm{
+            // display: inline;
+            display: flex;
+         }
+        }
+        .menu{
+        position: absolute;
+        top: 0px;
+        ;
+        z-index: 2;
+        right: -50%;
+        background-color: black;
+        color:white;
+        height:fit-content;
+        border-radius: 10px;
+        width: 50%;
+        transition: all 1s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:start;
+        &.active{
+            right: 0;
+        }
+        @include sm
+{
+    a{
+        display: initial;
+    }
+}
+        }
+
+        .user{
+            display: flex;
+            font-weight: bold;
+            align-items: center;
+            img{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-right: 20px;
+            }
+            span{
+                
+                @include sm{
+                    display: none;
+                }
+            }
+            .profile{
+                padding: 12px 24px;
+                margin: 20px;
+                background-color: #fece51;
+                cursor: pointer;
+                border:none;
+                position: relative;
+                .notifications{
+                    position: absolute;
+                    top: -8px;
+                    right: -8px;
+                   background-color: red;
+                   color: white;
+                   border-radius: 50%;
+                   width: 26px;
+                   height: 26px;display: flex;
+                   align-items: center;
+                   justify-content: center;
+                    
+                }
+            }
+        }
+    }
+    .left{
+        
+   flex: 3;
+   display: flex;
+   gap: 15px;
+        align-items: center;
+        .logo{
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            gap: 10px;
+
+            align-items: center;
+            img{
+                width: 28px;
+            }
+            span{
+                @include md{
+                    display: none;
+                }
+                @include sm{
+                    display: initial;
+                }
+            }
+        }
+    }
+
+}
+

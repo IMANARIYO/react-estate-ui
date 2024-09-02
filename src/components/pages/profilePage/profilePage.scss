@@ -1,0 +1,109 @@
+@import"../../responsive.scss";
+.profilePage {
+    display: flex;
+    height: 100%;
+@include md{
+    flex-direction: column;
+    overflow: auto;
+
+}
+    .details {
+        flex: 3;
+        overflow-y: scroll;
+        padding-bottom: 50px;
+        @include md{
+           flex: none;
+           height: max-content;
+        
+        }
+
+        .wrapper {
+            padding-right: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .title {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                h1 {
+                    font-weight: 300;
+                }
+
+                button {
+                    padding: 12px 24px;
+                    background-color: #fece51;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    b {
+                        margin-left: 5px;
+                    }
+                }
+            }
+
+            .list-section {
+                .title {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    h1 {
+                        font-weight: 300;
+                    }
+
+                    button {
+                        padding: 12px 24px;
+                        background-color: #fece51;
+                        border: none;
+                        cursor: pointer;
+                    }
+                }
+
+                // Add any additional styles for the List component if needed
+                .list-container {
+                    border: none;
+                    // styles for the List component
+                }
+            }
+        }
+    }
+
+    .chatContainer {
+        flex: 2;
+// background-color: black;
+height: 100%;
+@include md{
+    flex: none;
+    height: max-content;
+ 
+ }
+        .wrapper {
+            // background-color: yellow;
+            height: 100%;
+       overflow-y: scroll;
+         padding: 0px 20px;
+        }
+    }
+}
